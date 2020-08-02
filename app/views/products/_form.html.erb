@@ -1,0 +1,60 @@
+<div class="center">
+    <div class="col-xl-12">
+
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="form-group">
+  <div class="control-label col-sm-2">
+        <%= form.label :Name, class: "label1" %>
+      </div>
+      <div class="col-sm-12">
+      <%= form.text_field :productname ,class:"form-control" , placeholder: "Enter Your product name", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="control-label col-sm-2">
+      <%= form.label :Price, class: "label1" %>
+    </div>
+    <div class="col-sm-12">
+    <%= form.number_field :productprice, rows: 4 ,class:"form-control" , placeholder: "Enter your product price", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="control-label col-sm-2">
+      <%= form.label :Availability, class: "label1" %>
+    </div>
+    <div class="col-sm-12">
+    <%= form.check_box :productstatus, rows: 8,class: "checkbox checkbox1" , autofocus: true %>
+    </div>
+  </div>
+
+
+
+  <%= form.label "product Pic" %>
+  <%= form.file_field :image , class: "form-control"%> <br>
+
+
+  <div class="form-group">
+    <div class="col-sm-10">
+      <%= form.submit(@product.new_record? ? "Create" : "Update Account", class: 'btn btn-primary btn-lg') %>
+    </div>
+  </div>
+
+<% end %>
+
+</div>
+</div>

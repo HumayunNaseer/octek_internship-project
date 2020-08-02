@@ -1,0 +1,39 @@
+
+<p id="notice"><%= notice %></p>
+
+
+<h1 align ="center"> All Octek Traders </h1>
+<div align = "center">
+
+  <% @users.each do |user| %>
+      <ul class="listing center list_no_style">
+        <div class="row">
+          <div class="card card-body bg-light  col-md-8 userdiv" >
+            <li> <%= link_to  gravatar_for(user), user_path(user) %> </li>
+            <li class="article-title">
+              <%= link_to user.username, user_path(user) %>
+            </li>
+            <li> <small> <%= pluralize(user.products.count, "product") if user.products %> </small>
+              <% if user.status == "1" %>
+                    <td>Buyer</td>
+                <% else %>
+                    <td>Seller</td>
+                <%end %>
+             </li>
+
+              <% if logged_in? and current_user.admin? %>
+              <li> <%= link_to "Edit This User" ,edit_user_path(user),class: "btn btn-warning btn-sm" %>
+             <%= link_to "Delete this User" , user_path(user),class: "btn btn-danger btn-sm", method: :delete,
+            data: {confirm: "Are you sure to delete this user & all this articles?"} %> </li>
+              <% end %>
+
+
+          </div>
+        </div>
+      </ul>
+
+  <% end %>
+</div>
+
+
+<%= link_to 'New User', new_user_path %>
