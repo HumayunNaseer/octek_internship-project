@@ -7,7 +7,21 @@
   </div>
 </div>
 
-<h4 align = "center" > <%= @user.username %>'s Products </h4>
+
+
+<% if (@user.status == "1" && logged_in? && @user.id == current_user.id)%>
+<div class="newproductbtn  center">
+ <%= link_to "View Products", products_path , class: "btn btn-xs btn-success" %>
+ </div>
+ <% end %>
+
+
+ <% if (@user.status == "2" && logged_in? && @user.id == current_user.id)%>
+ <div class="newproductbtn  center">
+ <%= link_to 'New Product', new_product_path , class: "btn btn-xs btn-success " %>
+ </div>
+ <% end %>
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

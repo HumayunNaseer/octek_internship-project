@@ -38,14 +38,35 @@
       <%= form.label :Availability, class: "label1" %>
     </div>
     <div class="col-sm-12">
-    <%= form.check_box :productstatus, rows: 8,class: "checkbox checkbox1" , autofocus: true %>
+      <%= form.check_box :productstatus, rows: 8,class: "checkbox checkbox1" , autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+
+    <div class=" control-label col-sm-12">
+      <%= form.label "product Pic" , class: "label1 " %>
+      <%= form.file_field :image , class: "form-control" , row: 4%> <br>
     </div>
   </div>
 
 
+  <div class="form-group categorycollectiontag">
+    <%= form.label "Select Category" , class: "label1 " %>
+    <div class=" control-label col-sm-12 seonddivcategory">
 
-  <%= form.label "product Pic" %>
-  <%= form.file_field :image , class: "form-control"%> <br>
+      <%= form.collection_select :category_id, Category.all, :id, :name, class: 'form-control ', id: 'sel1' %>
+    </div>
+  </div>
+
+
+</div>
+
+
+  </div>
+
+
+
 
 
   <div class="form-group">

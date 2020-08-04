@@ -9,6 +9,8 @@
       <th>Productprice</th>
       <th>Productstatus</th>
       <th>Created By</th>
+      <th>category</th>
+
       <th colspan="3"></th>
 
 
@@ -28,6 +30,9 @@
 
         <td><%= product.user.username if product.user %></td>
 
+        <td><%= product.category&.name || 'No category' %></td>
+
+      
         <td><%= link_to 'Show', product ,  class: "btn btn-xs btn-primary" %></td>
         <% if logged_in? && (current_user == product.user) %>
         <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-xs btn-warning" %></td>
@@ -35,11 +40,10 @@
         <% end %>
       </tr>
     <% end %>
+
+
+
   </tbody>
 </table>
 
 <br>
-
-<div class="newproductbtn  center">
-<%= link_to 'New Product', new_product_path , class: "btn btn-xs btn-success " %>
-</div>
