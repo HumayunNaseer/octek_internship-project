@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-
+has_many :favorites
+has_many :favorite_products, through: :favorites, source: :favorited, source_type: 'Product'
 has_many :products
 
 before_save {self.email = email.downcase}

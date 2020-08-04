@@ -2,7 +2,7 @@
 
 <% if @product.user %>
 
-    <div class="center">
+  <div class="center">
     <ul class="listing  list_no_style">
       <div class="row">
         <div class=" center col-md-7 userdiv center" >
@@ -17,11 +17,8 @@
     <div class="center"><%= image_tag @product.image, style: "width: 400px;  margin-bottom: 25px;" %>
     </div>
       <br>
-    </div>
-    <% end %>
-
-
-
+  </div>
+<% end %>
 
     <div class="article-actions center">
       <%if logged_in? && (current_user == @product.user)%>
@@ -32,6 +29,13 @@
                                            class: "btn btn-xs btn-danger" %>
       <% end %>
       <%=link_to "View all Products", products_path, class: "btn btn-xs btn-success" %>
+
+
+      <%- unless current_user.favorite_products.exists?(id: @product.id) -%>
+      <%= link_to 'Add to favorites', favorite_products_path(product_id: @product), method: :post, class: "btn btn-xs btn-primary" %>
+      <%- else -%>
+      <%= link_to 'Remove from favorites', favorite_product_path(@product), method: :delete , class: "btn btn-xs btn-warning"%>
+      <%- end -%>
     </div>
 
 </div>
