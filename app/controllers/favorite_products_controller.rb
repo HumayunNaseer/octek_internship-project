@@ -1,5 +1,5 @@
 class FavoriteProductsController < ApplicationController
-  before_action :set_product
+  before_action :set_product, only: [:create, :destroy]
 
   def create
     if Favorite.create(favorited: @product, user: current_user)
@@ -12,6 +12,10 @@ class FavoriteProductsController < ApplicationController
   def destroy
     Favorite.where(favorited_id: @product.id, user_id: current_user.id).first.destroy
     redirect_to @product, notice: 'Project is no longer in favorites'
+  end
+
+  def index
+    @favorites = Favorite.all
   end
 
   private
