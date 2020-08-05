@@ -29,13 +29,17 @@
                                            class: "btn btn-xs btn-danger" %>
       <% end %>
       <%=link_to "View all Products", products_path, class: "btn btn-xs btn-success" %>
-
+      <% if (current_user.status == "1") %>
+      <%=link_to "Bid on this Project",new_bid_path, class: "btn btn-xs btn-success" %>
+      <% end %>
 
       <%- unless current_user.favorite_products.exists?(id: @product.id) -%>
       <%= link_to 'Add to favorites', favorite_products_path(product_id: @product), method: :post, class: "btn btn-xs btn-primary" %>
       <%- else -%>
       <%= link_to 'Remove from favorites', favorite_product_path(@product), method: :delete , class: "btn btn-xs btn-warning"%>
       <%- end -%>
+
+
     </div>
 
 </div>

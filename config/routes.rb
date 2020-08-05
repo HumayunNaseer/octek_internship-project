@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bids
 resources :favorite_products, only: [:create, :destroy,:index]
 resources :categories
 resources :products
