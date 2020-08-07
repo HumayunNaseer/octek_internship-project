@@ -6,13 +6,13 @@ Octek trading application is a simple auction application built on Ruby on Rails
 
 
 <b>User Functionalities:</b><br>
-Users can sign up & set its status as a buyer or as a seller.
- Users can Login and after that users have access to all functionalities according to its status.
-User must have a unique email.
-User email pattern should match with the email pattern.
-Users can view all the traders currently register on application.
-Users can view all the Products Which have uploaded on application with their owner name , Product status as well as their Price & picture.
-User can only access Seller & Buyer functionalities after login.
+Users can sign up & set its status as a buyer or as a seller.<br>
+Users can Login and after that users have access to all functionalities according to its status.<br>
+User must have a unique email.<br>
+User email pattern should match with the email pattern.<br>
+Users can view all the traders currently register on application.<br>
+Users can view all the Products Which have uploaded on application with their owner name , Product status as well as their Price & picture.<br>
+User can only access Seller & Buyer functionalities after login.<br>
 
 <b>Admin Functionalities:</b><br>
 App owner can make a user as an admin by setting its value to true.
