@@ -59,8 +59,8 @@ html<br>
 <b>Additions Ruby gems & features:</b><br>
 
 gem "mini_magick"<br>
-gem 'bcrypt',   '~>3.1.7'<br>
-gem 'bootstrap', '~> 4.5.0'<br>
-gem 'bootsnap',   '1.4.6', require: false<br>
+gem 'bcrypt',   '3.1.7'<br>
+gem 'bootstrap', '4.5.0'<br>
+gem 'bootsnap',   '1.4.6'<br>
 gem 'pg', '1.2.3'<br>
 Active Storage<br>
