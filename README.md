@@ -15,52 +15,52 @@ Users can view all the Products Which have uploaded on application with their ow
 User can only access Seller & Buyer functionalities after login.<br>
 
 <b>Admin Functionalities:</b><br>
-App owner can make a user as an admin by setting its value to true.
-Admin can edit all the products.
-Admin can destroy any product .
-Admin can edit user information.
-Admin can delete users from Application.
-Admin can edit users information.
+App owner can make a user as an admin by setting its value to true.<br>
+Admin can edit all the products.<br>
+Admin can destroy any product .<br>
+Admin can edit user information.<br>
+Admin can delete users from Application.<br>
+Admin can edit users information.<br>
 
 <b>Buyer Functionalities:</b><br>
-Buyer can view All the Products currently present on Application.
-Buyer can bid on projects which are not sold yet.
-Buyer can Add any product to its Favorite product list.
-Buyer can Remove any product from its Favorite list.
-Buyer can Edit its Profile .
-Buyer can see all the related details of the product with the owner name.
+Buyer can view All the Products currently present on Application.<br>
+Buyer can bid on projects which are not sold yet.<br>
+Buyer can Add any product to its Favorite product list.<br>
+Buyer can Remove any product from its Favorite list.<br>
+Buyer can Edit its Profile .<br>
+Buyer can see all the related details of the product with the owner name.<br>
 
 
 
 <b>Seller Functionalities:</b><br>
-Sellers can upload products by providing its attributes.
-Sellers can see only bids done on its products.
-Seller can approve any bid and will make Product as Sold.
-Seller can see the Buyer name who bids.
-Seller can Edit / delete its own products.
+Sellers can upload products by providing its attributes.<br>
+Sellers can see only bids done on its products.<br>
+Seller can approve any bid and will make Product as Sold.<br>
+Seller can see the Buyer name who bids.<br>
+Seller can Edit / delete its own products.<br>
 
 
 <b>Product Validations:</b><br>
-Product Must have a name .
-Product must have a category(which are pre-defined).
-Product must have a picture.
-Product must have a price.
-Product must have a user (which assigns implicitly).
+Product Must have a name .<br>
+Product must have a category(which are pre-defined).<br>
+Product must have a picture.<br>
+Product must have a price.<br>
+Product must have a user (which assigns implicitly).<br>
 
 
 <b>Languages & Frameworks:</b><br>
 
-Ruby on Rails
-Bootstrap
-Css
-html
+Ruby on Rails<br>
+Bootstrap<br>
+Css<br>
+html<br>
 
 
 <b>Additions Ruby gems & features:</b><br>
 
-gem "mini_magick"
-gem 'bcrypt',   '~>3.1.7'
-gem 'bootstrap', '~> 4.5.0'
-gem 'bootsnap',   '1.4.6', require: false
-gem 'pg', '1.2.3'
-Active Storage
+gem "mini_magick"<br>
+gem 'bcrypt',   '~>3.1.7'<br>
+gem 'bootstrap', '~> 4.5.0'<br>
+gem 'bootsnap',   '1.4.6', require: false<br>
+gem 'pg', '1.2.3'<br>
+Active Storage<br>
