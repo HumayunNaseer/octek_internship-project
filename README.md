@@ -4,6 +4,10 @@
 <b>Application Overview:</b><br>
 Octek trading application is a simple auction application built on Ruby on Rails where a user can make its profile sign up as a buyer or seller & after a login user can perform different actions.
 
+<b>Installation:</b><br>
+
+<p class = "well">gem install rails -v 6.0.3.2<p>
+
 
 <b>User Functionalities:</b><br>
 Users can sign up & set its status as a buyer or as a seller.<br>
