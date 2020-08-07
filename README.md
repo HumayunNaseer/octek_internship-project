@@ -22,8 +22,7 @@ Admin can edit user information.
 Admin can delete users from Application.
 Admin can edit users information.
 
-<b>Buyer Functionalities:<b>
-<br>
+<b>Buyer Functionalities:</b><br>
 Buyer can view All the Products currently present on Application.
 Buyer can bid on projects which are not sold yet.
 Buyer can Add any product to its Favorite product list.
