@@ -29,8 +29,8 @@
                                            class: "btn btn-xs btn-danger" %>
       <% end %>
       <%=link_to "View all Products", products_path, class: "btn btn-xs btn-success" %>
-      <% if (current_user.status == "1") %>
-      <%=link_to "Bid on this Project",new_bid_path, class: "btn btn-xs btn-success" %>
+      <% if (current_user.status == "1" && @product.productstatus == true) %>
+      <%=link_to "Bid on this Project",new_bid_path(product_id: @product), class: "btn btn-xs btn-success" %>
       <% end %>
 
       <%- unless current_user.favorite_products.exists?(id: @product.id) -%>

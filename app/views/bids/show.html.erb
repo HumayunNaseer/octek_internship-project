@@ -7,12 +7,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @bid.user_id %>
+  <%= @bid.user.username %>
 </p>
 
 <p>
   <strong>Product:</strong>
-  <%= @bid.product_id %>
+  <%= @bid.product.productname %>
 </p>
 
 <%= link_to 'Edit', edit_bid_path(@bid) %> |

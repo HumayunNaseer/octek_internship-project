@@ -8,17 +8,20 @@
       <th>Bidamount</th>
       <th>Bid Placed By</th>
       <th>Product Name</th>
+      <th > Approve Bid </th>
       <th colspan="3"></th>
+
     </tr>
   </thead>
 
   <tbody>
     <% @bids.each do |bid| %>
       <tr>
-        <% if bid.product.user == current_user %>
+        <% if (bid.product.user == current_user) && (bid.product.productstatus == true)%>
         <td><%= bid.bidamount %></td>
         <td><%= bid.user.username %></td>
-        <td><%= bid.product.productname %></td>
+        <td><%= bid.product.productstatus %></td>
+        <td class=" btn btn-xs btn-warning"><%= link_to "Approve Bid", approve_bid_path(bid) %></td>
         <td><%= link_to 'Show', bid %></td>
         <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
         <td><%= link_to 'Destroy', bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>

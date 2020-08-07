@@ -1,5 +1,7 @@
 class BidsController < ApplicationController
-  before_action :set_bid, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:new]
+  before_action :set_bid, only: [:show, :edit, :update, :destroy, :approve]
+
 
   # GET /bids
   # GET /bids.json
@@ -14,7 +16,7 @@ class BidsController < ApplicationController
 
   # GET /bids/new
   def new
-    @bid = Bid.new
+    @bid = @product.bids.new
   end
 
   # GET /bids/1/edit
@@ -24,11 +26,9 @@ class BidsController < ApplicationController
   # POST /bids
   # POST /bids.json
   def create
-    @bid = Bid.new(bid_params)
-    @bid.user = current_user
-    @product = Product.find(params[:id])
-    @bid.product = @product
-
+    # @bid = Bid.new(bid_params)
+    # @bid.user = current_user
+    @bid = current_user.bids.build(bid_params)
     respond_to do |format|
       if @bid.save
         format.html { redirect_to @bid, notice: 'Bid was successfully created.' }
@@ -38,6 +38,9 @@ class BidsController < ApplicationController
         format.json { render json: @bid.errors, status: :unprocessable_entity }
       end
     end
+
+    # @bid = current_user.bids.build(bid_params)
+    # respond_with @bid, location: bids_path
   end
 
   # PATCH/PUT /bids/1
@@ -64,14 +67,26 @@ class BidsController < ApplicationController
     end
   end
 
+  def approve
+    @bid.product.update_attributes(productstatus: false)
+    redirect_to products_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
+
+    def set_product
+      @product = Product.find(params[:product_id])
+    end
+
     def set_bid
       @bid = Bid.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def bid_params
-      params.require(:bid).permit(:bidamount, :user_id, :product_id)
+      params.require(:bid).permit(:bidamount, :product_id)
     end
+
+
 end
