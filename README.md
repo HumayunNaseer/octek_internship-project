@@ -1,7 +1,7 @@
 <h1>Welcome To Octek Trading-App</h1>
 
 
-Application Overview:
+<b>Application Overview:</b>
 Octek trading application is a simple auction application built on Ruby on Rails where a user can make its profile sign up as a buyer or seller & after a login user can perform different actions.
 
 
