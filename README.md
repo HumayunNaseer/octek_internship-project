@@ -7,16 +7,16 @@ Octek trading application is a simple auction application built on Ruby on Rails
 <b>Installation:</b><br>
 
 ```bash
-gem install rails -v 6.0.3.2
+$ gem install rails -v 6.0.3.2
 ```
 ```bash
-mkdir environment     # Make an environment directory.
-cd environment/       # Change into the environment directory.
+$ mkdir environment     # Make an environment directory.
+$ cd environment/       # Change into the environment directory.
 ```
 Put downloaded app in the dirctory above & access it by
 
 ```bash
-cd environment/octek-app
+$ cd environment/octek_app
 ```
 initialize server
 
@@ -24,6 +24,8 @@ initialize server
 $ rails server
 ```
 you can access you app by visiting http://localhost:3000/
+<br>
+
 
 <b>User Functionalities:</b><br>
 Users can sign up & set its status as a buyer or as a seller.<br>
