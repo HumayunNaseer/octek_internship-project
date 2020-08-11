@@ -15,7 +15,7 @@ class FavoriteProductsController < ApplicationController
   end
 
   def index
-    @favorites = Favorite.all
+    @favorites = current_user.favorite_products
   end
 
   private

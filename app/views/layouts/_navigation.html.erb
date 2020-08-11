@@ -38,7 +38,8 @@
         <%= link_to "View your profile", user_path(current_user) , class: "dropdown-item" %>
         <%= link_to "Edit your profile", edit_user_path(current_user) , class: "dropdown-item" %>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <%= link_to "Show my bids", bids_path , class: "dropdown-item" %>
+        <%= link_to "Show my Wishlist", favorite_products_path , class: "dropdown-item" %>
       </div>
     </li>
 
