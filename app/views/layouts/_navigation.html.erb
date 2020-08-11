@@ -11,10 +11,11 @@
         <%= link_to "Traders", users_path , class: "nav-link" %>
       </li>
 
+      <% if logged_in? %>
       <li class="nav-item">
         <%= link_to "Products", products_path , class: "nav-link" %>
       </li>
-
+      <% end %>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
